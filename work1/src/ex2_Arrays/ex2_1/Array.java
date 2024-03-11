@@ -1,45 +1,45 @@
 package ex2_Arrays.ex2_1;
 
 public class Array {
-    private int arr[];
+    private final int[] arr;
 
-    public int[] getArr(int[] arr) {
-        return arr;
-    }
-    public Array(int arr[]) {
+    public Array(int[] arr) {
         this.arr = arr;
     }
     public void DisplayFor() {
-        for (int i = arr[0]; i <= arr.length; i++) {
-            if (i != arr.length) {
-                System.out.printf("%d;", i);
+        for (int i = 0; i <= arr.length-1; i++) {
+            int num = arr[i];
+            if (i != arr.length-1) {
+                System.out.printf("%d;", num);
             } else {
-                System.out.printf("%d >>> \n", i);
+                System.out.printf("%d >>> \n", num);
             }
 
         }
     }
     public void DisplayDoWhile() {
-        int length = arr[0];
+        int i = 0;
         do {
-            if (length == arr.length) {
+            int length = arr[i];
+            if (i == arr.length-1) {
                 System.out.printf("%d >> \n", length);
             } else {
                 System.out.printf("%d!", length);
             }
-            length ++;
-        } while (length <= arr.length);
+            i ++;
+        } while (i <= arr.length-1);
     }
     public void DisplayWhile() {
-        int length = arr[0];
-        while (length <= arr.length) {
-            if (length == arr.length) {
+        int i = 0;
+        while (i <= arr.length-1) {
+            int length = arr[i];
+            if (i == arr.length-1) {
                 System.out.printf("%d => \n", length);
             } else {
                 System.out.printf("%d:", length);
             }
-            length ++;
-        };
+            i ++;
+        }
     }
     public void DisplayForeach() {
         System.out.print("|");
