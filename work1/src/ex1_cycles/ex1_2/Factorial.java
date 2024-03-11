@@ -1,4 +1,4 @@
-package ex1_2;
+package ex1_cycles.ex1_2;
 import java.util.Scanner;
 
 public class Factorial {
