@@ -1,4 +1,4 @@
-package ex1_1;
+package ex1_cycles.ex1_1;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
