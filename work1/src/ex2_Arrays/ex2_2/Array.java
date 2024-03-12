@@ -1,7 +1,7 @@
 package ex2_Arrays.ex2_2;
 
 public class Array {
-    private final int[] arr;
+    private int[] arr;
 
     public Array(int[] arr) {
         this.arr = arr;
@@ -15,7 +15,12 @@ public class Array {
                     System.out.printf("%d;", num);
                 }
             } else {
-                System.out.printf("%d >>> \n", num);
+                if (remainder != 1) {
+                    System.out.print(" >>> \n");
+
+                } else {
+                    System.out.printf("%d >>> \n", num);
+                }
             }
 
         }
@@ -26,8 +31,12 @@ public class Array {
             int length = arr[i];
             int remainder = i % 2;
             if (i == arr.length-1) {
-                System.out.printf("%d >> \n", length);
-
+                if (remainder != 1) {
+                    System.out.print(" >> \n");
+                    break;
+                } else {
+                    System.out.printf("%d >> \n", length);
+                }
             } else {
                 if (remainder == 1) {
                     System.out.printf("%d!", length);
@@ -40,12 +49,16 @@ public class Array {
         int i = 0;
         while (i <= arr.length-1) {
             int remainder = i % 2;
-            int length = arr[i];
+            int item = arr[i];
             if (i == arr.length-1) {
-                System.out.printf("%d => \n", length);
+                if (remainder != 1) {
+                    System.out.print(" => \n");
+                } else {
+                    System.out.printf("%d => \n", item);
+                }
             } else {
                 if (remainder == 1) {
-                    System.out.printf("%d:", length);
+                    System.out.printf("%d:", item);
                 }
             }
             i ++;
