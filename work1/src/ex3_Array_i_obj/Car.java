@@ -9,7 +9,13 @@ class Car {
         this.model = model;
         this.year_of_issue = year_of_issue;
     }
-    public void printInfo() {
-        System.out.println("Car: " + brand + "\n Model: " + model + "\n Year: " + year_of_issue);
+
+    @Override
+    public String toString() {
+        return "Car:" +
+                "\n brand='" + brand + '\'' + "" +
+                "\n model='" + model + '\'' + "" +
+                "\n year of issue='" + year_of_issue + '\'' +
+                ";";
     }
 }
