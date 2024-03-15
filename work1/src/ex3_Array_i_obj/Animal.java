@@ -9,12 +9,22 @@ class Animal {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     Animal(String animal, String name, String breed) {
         this.animal = animal;
-        this.name = name;
+        setName(name);
         this.breed = breed;
     }
-    public void printInfo() {
-        System.out.println("Animal: " + animal + "\n Name: " + getName() + ", Breed: " + breed);
+
+    @Override
+    public String toString() {
+        return "Animal:" +
+                "\n animal='" + animal + '\'' + "," +
+                "\n name='" + getName() + '\'' + "," +
+                "\n breed='" + breed + '\'' +
+                ";";
     }
 }

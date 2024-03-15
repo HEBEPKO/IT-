@@ -4,25 +4,32 @@ public class Person {
     private String name;
     private String address;
 
-    public String getAddress() {
-        return address;
-    }
-
     public String getName() {
         return name;
     }
 
-    public Person(String name, String address) {
-
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void trainsAnimal() {
-        System.out.println("Command to lie down");
+    public String getAddress() {
+        return address;
     }
 
-    public void printInfo() {
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-        System.out.println("Person: " + getName() + "\n Lives at address: " + getAddress());
+    public Person(String name, String address) {
+        setName(name);
+        setAddress(address);
+    }
+
+    @Override
+    public String toString() {
+        return "Person: " +
+                "\n name='" + getName() + '\'' + "," +
+                "\n address='" + getAddress() + '\'' +
+                ";";
     }
 }
