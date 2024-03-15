@@ -25,10 +25,6 @@ public class Person {
         setAddress(address);
     }
 
-    public void trainsAnimal() {
-        System.out.println("Command to lie down");
-    }
-
     @Override
     public String toString() {
         return "Person: " +

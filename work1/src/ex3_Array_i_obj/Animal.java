@@ -23,7 +23,7 @@ class Animal {
     public String toString() {
         return "Animal:" +
                 "\n animal='" + animal + '\'' + "," +
-                "\n name='" + name + '\'' + "," +
+                "\n name='" + getName() + '\'' + "," +
                 "\n breed='" + breed + '\'' +
                 ";";
     }
