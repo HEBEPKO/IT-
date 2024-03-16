@@ -17,7 +17,7 @@ public class Motor {
 
     @Override
     public String toString() {
-        return "Motor" +
+        return "Motor:" +
                 "\n volume = " + volume +
                 " cubic centimeters, " +
                 " fuel = " + fuel +

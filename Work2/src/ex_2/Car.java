@@ -28,9 +28,9 @@ public class Car {
         this.lock = lock;
     }
 
-    public Car(Motor motor, String wheels, String vehicleCapacity, String categoryToManage) {
+    public Car(Motor motor, Wheels wheels, String vehicleCapacity, String categoryToManage) {
         this.motor = String.valueOf(motor);
-        this.wheels = wheels;
+        this.wheels = String.valueOf(wheels);
         this.vehicleCapacity = vehicleCapacity;
         this.categoryToManage = categoryToManage;
         setLock(lock);
@@ -38,6 +38,7 @@ public class Car {
     }
 
     public void displayInfo() {
-        System.out.printf("Car with: \n %s", motor);
+        System.out.println("Car with:");
+        System.out.printf("%s %s",motor,wheels);
     }
 }
