@@ -1,3 +1,5 @@
+package ex_2;
+
 //1. Написать классы на тему "Автомобиль" (несколько классов) с использованием интерфейсов и абстрактных классов. У автомобиля должно быть:
 //        #   1.1) Мотор
 //        #   1.1.1) Имеет объем
@@ -17,6 +19,7 @@ public class Car {
     public String categoryToManage;
     private int lock;
 
+
 //    public int getLock() {
 //        return lock;
 //    }
@@ -25,7 +28,7 @@ public class Car {
         this.lock = lock;
     }
 
-    Car(Motor motor, String wheels, String vehicleCapacity, String categoryToManage) {
+    public Car(Motor motor, String wheels, String vehicleCapacity, String categoryToManage) {
         this.motor = String.valueOf(motor);
         this.wheels = wheels;
         this.vehicleCapacity = vehicleCapacity;
