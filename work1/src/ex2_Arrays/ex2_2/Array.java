@@ -1,12 +1,12 @@
 package ex2_Arrays.ex2_2;
 
 public class Array {
-    private int[] arr;
+    private final int[] arr;
 
     public Array(int[] arr) {
         this.arr = arr;
     }
-    public void DisplayFor() {
+    public void displayFor() {
         for (int i = 0; i <= arr.length-1; i++) {
             int num = arr[i];
             int remainder = i % 2;
@@ -25,7 +25,7 @@ public class Array {
 
         }
     }
-    public void DisplayDoWhile() {
+    public void displayDoWhile() {
         int i = 0;
         do {
             int length = arr[i];
@@ -45,7 +45,7 @@ public class Array {
             i ++;
         } while (i <= arr.length-1);
     }
-    public void DisplayWhile() {
+    public void displayWhile() {
         int i = 0;
         while (i <= arr.length-1) {
             int remainder = i % 2;
