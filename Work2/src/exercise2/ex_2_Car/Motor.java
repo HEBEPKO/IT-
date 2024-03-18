@@ -1,4 +1,4 @@
-package ex_2;
+package exercise2.ex_2_Car;
 //        #   1.1) Мотор
 //        #   1.1.1) Имеет объем
 //        #   1.1.2) Хранит информацию о бензине который в него можно заливать
@@ -6,10 +6,10 @@ package ex_2;
 
 public class Motor {
     public int volume;
-    public String fuel;
+    public Fuel fuel;
     public String stampsMotor;
 
-    public  Motor(int volume, String fuel, String stampsMotor) {
+    public  Motor(int volume, Fuel fuel, String stampsMotor) {
         this.volume = volume;
         this.fuel = fuel;
         this.stampsMotor = stampsMotor;
@@ -20,7 +20,7 @@ public class Motor {
         return "Motor:" +
                 "\n volume = " + volume +
                 " cubic centimeters, " +
-                " fuel = " + fuel +
+                " fuel = " + fuel + "," +
                 " stampsMotor = " + stampsMotor +
                 ",";
     }
