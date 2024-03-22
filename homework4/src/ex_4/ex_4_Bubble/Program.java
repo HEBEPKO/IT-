@@ -6,27 +6,32 @@
 
 package ex_4.ex_4_Bubble;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Bubble implements Sort {
+public class Program {
     public static void main(String[] args) {
-        int[] randomNumbers = new int[100000];
-        Random random = new Random();
-        for (int i = 0; i < randomNumbers.length; i++) {
-            randomNumbers[i] = random.nextInt();
-        }
+        Bubble randomNumber = new Bubble(10);
 
-        Sort sort;
+        randomNumber.fill();
+        randomNumber.print();
+
+        randomNumber.sortBubble(randomNumber.getNameArr());
+        randomNumber.print();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите начальный и конечный индексы (разделенные пробелом):");
+        System.out.println("\n Введите начальный и конечный индексы (разделенные пробелом):");
         String next = scanner.nextLine();
         String[] s = next.split(" ");
-        int i1 = Integer.valueOf(s[0]);
-        int i2 = Integer.valueOf(s[1]);
-        for (int i = i1; i < i2; i++) {
-            System.out.print(randomNumbers[i] + " ");
-        }
+        int startIndex = Integer.valueOf(s[0]);
+        int endIndex = Integer.valueOf(s[1]);
+
+        randomNumber.print(startIndex,endIndex);
+
+        Bubble randomNum = new Bubble(10);
+        randomNum.fill();
+        randomNum.print();
+
+        randomNum.sortBubble(randomNum.getNameArr(), false);
+        randomNum.print();
     }
 }
