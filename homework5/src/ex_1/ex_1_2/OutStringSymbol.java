@@ -1,4 +1,4 @@
-package ex_1_2;
+package ex_1.ex_1_2;
 
 public class OutStringSymbol {
     private String string;
@@ -10,8 +10,16 @@ public class OutStringSymbol {
     }
 
     public void outStringSymbol(){
-        for(int i = 0; i < strToArray.length; i++) {
-            System.out.print(strToArray[i] + ";");
+        for (char c : strToArray) {
+            System.out.print(c + ";");
         }
+    }
+
+    public String getString() {
+        return string;
+    }
+
+    public void setString(String string) {
+        this.string = string;
     }
 }
