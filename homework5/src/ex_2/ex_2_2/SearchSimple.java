@@ -10,7 +10,7 @@ public class SearchSimple implements SearchText {
     @Override
     public int wordSearch(String wordStr) {
         int wordCount = 0;
-        String[] words = text.split("\\^|\\s|[.]|\"");
+        String[] words = text.split("\\^|\\s|\\.|,|\"");
         for (String word : words) {
             if (word.equalsIgnoreCase(wordStr)) {
                 wordCount++;

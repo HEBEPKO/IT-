@@ -14,18 +14,19 @@ import java.nio.file.Paths;
 
 public class ProgramSearch {
     public static void main(String[] args) throws IOException {
-        String path = Files.readString(Paths.get("Война и мир.txt"));
+        String path;
+        path = Files.readString(Paths.get("WarEndWorld.txt"));
         String text = path;
         SearchText searchSimple = new SearchSimple(text);
-//        TextSearch regexSearch = new RegexSearch(text);
+        SearchRegEx regexSearch = new SearchRegEx(text);
 
 //        String wordStr = args[0];
         String wordStr = "Война";
         int simpleCount = searchSimple.wordSearch(wordStr);
-//        int regexCount = regexSearch.wordStr(wordStr);
+        int regexCount = regexSearch.wordSearch(wordStr);
 
         System.out.println("Результаты поиска для слова '" + wordStr + "':");
         System.out.println("Простой поиск: " + simpleCount + " вхождений");
-//        System.out.println("Поиск с использованием регулярных выражений: " + regexCount + " вхождений");
+        System.out.println("Поиск с использованием регулярных выражений: " + regexCount + " вхождений");
     }
 }
