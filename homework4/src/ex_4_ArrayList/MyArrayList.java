@@ -12,10 +12,19 @@ public class MyArrayList<T> {
     }
 
     public void add(int element) {
-        if (size == elements.length) {
+        if (size == elements.length*0.75) {
+            increaseCapacity();
             elements = Arrays.copyOf(elements, size * 2);
         }
         elements[size++] = element;
+    }
+
+    private void increaseCapacity() {
+        Object[] newElements = new Object[elements.length * 2];
+        for(int i = 0; i < size; i++) {
+            newElements[i] = elements[i];
+        }
+        elements = newElements;
     }
 
     public void addAll(int[] array) {
@@ -46,5 +55,13 @@ public class MyArrayList<T> {
 
     public void clear() {
         size = 0;
+    }
+
+    @Override
+    public String toString() {
+        return "MyArrayList{" +
+                "elements=" + Arrays.toString(elements) +
+                ", size=" + size +
+                '}';
     }
 }
