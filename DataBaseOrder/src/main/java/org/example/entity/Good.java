@@ -7,9 +7,9 @@ import lombok.*;
 public class Good {
     private String nameGood;
     private String descriptionGood;
-    private int price;
+    private Double price;
 
-    public Good(String nameGood, String descriptionGood, int price) {
+    public Good(String nameGood, String descriptionGood, Double price) {
         this.nameGood = nameGood;
         this.descriptionGood = descriptionGood;
         this.price = price;
