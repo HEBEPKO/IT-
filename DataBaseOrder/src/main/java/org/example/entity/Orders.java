@@ -2,10 +2,10 @@ package org.example.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -13,9 +13,10 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Order {
-    @Id()
-    private Integer orderID;
+@Table(name = "orders")
+public class Orders {
+    @Id
+    private Integer ordersID;
 //    private List items;
-    private Date orderDate;
+    private Date ordersDate;
 }
