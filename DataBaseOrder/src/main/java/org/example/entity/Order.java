@@ -1,19 +1,21 @@
 package org.example.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
+import java.util.Date;
 import java.util.List;
 
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Order {
-    private int idOrder;
-    private List<GoodsInOrder> goods;
-    private String admissionDate;
-
-    public Order(int idOrder, List<GoodsInOrder> goods, String admissionDate) {
-        this.idOrder = idOrder;
-        this.goods = goods;
-        this.admissionDate = admissionDate;
-    }
+    @Id()
+    private Integer orderID;
+//    private List items;
+    private Date orderDate;
 }

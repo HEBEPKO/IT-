@@ -1,5 +1,9 @@
 package org.example.repository;
 
-public interface RepositoryOrder {
+import org.example.entity.Order;
 
+import java.util.List;
+
+public interface RepositoryOrder {
+    List<Order> getAllOrder();
 }
